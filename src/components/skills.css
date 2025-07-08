@@ -1,0 +1,44 @@
+.skills-heading {
+  font-size: 3rem;         /* Makes the heading big */
+  font-weight: 900;        /* Makes it bold */
+  text-align: center;      /* Centers the text */
+  margin-bottom: 32px;     /* Adds space below */
+  color: #fff;             /* Optional: white color */
+  letter-spacing: 1px;     /* Optional: spacing between letters */
+}
+.skill {
+  position: relative;
+  display: inline-block;
+  font-size: 1rem;
+  font-weight: 50;
+  color: #fff;
+  padding: 12px 32px;
+  margin: 10px 0;
+  background: #23272a;
+  border-radius: 10px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: box-shadow 0.3s;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.skill::before {
+  content: '';
+  position: absolute;
+  top: 0; left: -75%;
+  width: 50%; height: 50%;
+  background: linear-gradient(120deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0.7) 50%, rgba(255,255,255,0.1) 100%);
+  transform: skewX(-20deg);
+  transition: left 0.9s;
+  pointer-events: none;
+}
+
+.skill:hover::before {
+  left: 125%;
+  transition: left 0.5s;
+}
+
+.skill:hover {
+  box-shadow: 0 0 16px 4px #00ffe7, 0 2px 8px rgba(0,0,0,0.1);
+  z-index: 1;
+}
